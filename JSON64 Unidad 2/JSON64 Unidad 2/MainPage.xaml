@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JSON64_Unidad_2.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to my App!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout  Orientation="Vertical" Padding="30" Spacing="40">
+            <Frame BackgroundColor="#BF043055" HasShadow="False">
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <Entry Text="{Binding Username}" PlaceholderColor="White" Placeholder="Username" TextColor="White"/>
+                    <Entry Text="{Binding Password}" PlaceholderColor="White" Placeholder="Password" TextColor="White" IsPassword="True"/>
+                    <Entry  Text="{Binding Name}" PlaceholderColor="White" Placeholder="Name" TextColor="White"/>
+                    <Entry  Text="{Binding Ap1}" PlaceholderColor="White" Placeholder="Ap1" TextColor="White"/>
+                    <Entry  Text="{Binding Ap2}" PlaceholderColor="White" Placeholder="Ap2" TextColor="White"/>
+                </StackLayout>
+            </Frame>
+            <Label Text="{Binding JsonResult}"></Label>
+            <Button Command="{Binding RegisterCommand}" Text="Login" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    BackgroundColor="#088da5" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
